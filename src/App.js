@@ -1,21 +1,12 @@
 import React from 'react'
-// import Navbar from './components/Navbar';
 import News from './components/News';
-// import "./components/app.css"
-// import Home from './components/Home';
-// import About from './components/About';
-// import {
-//   BrowserRouter,  
-//   Routes,
-//    Route} from "react-router-dom";
+
  import LoadingBar from 'react-top-loading-bar'
  import {BrowserRouter, Route, Link, Routes} from 'react-router-dom';
 import { useState } from 'react';
 const App =()=>{
      var pageSize = 8;
-    // const [progress, setProgress] = useState(0);
-
-const [progress,setprogress]=useState(0);
+  const [progress,setprogress]=useState(0);
 
 return (
 <div>
@@ -33,14 +24,11 @@ return (
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">NewsBook</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                          <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                      
-                         
-                          
-                            <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
+                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                             <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/general">General</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
@@ -55,23 +43,16 @@ return (
 	
           		<Routes>
             
-          
-          
-          
-                
-             
-         
-             <Route exact path="/" element={<News setprogress={setprogress}key="general" pageSize={pageSize} country="in" category="general"/>}/>
+                   <Route exact path="/" element={<News setprogress={setprogress}key="general" pageSize={pageSize} country="in" category="general"/>}/>
+                   <Route exact path="/business" element={<News setprogress={setprogress} key="business" pageSize={pageSize} country="in" category="business"/>}/> 
            
-             <Route exact path="/business" element={<News setprogress={setprogress} key="business" pageSize={pageSize} country="in" category="business"/>}/> 
-           
-             <Route exact path="/entertainment" element={<News setprogress={setprogress} key="entertainment" pageSize={pageSize} country="in" category="entertainment"/>}/> 
-             <Route exact path="/general" element={<News setprogress={setprogress}  key="general" pageSize={pageSize} country="in" category="general"/>}/> 
-             <Route exact path="/health" element={<News setprogress={setprogress} key="health" pageSize={pageSize} country="in" category="health"/>}/> 
-             <Route exact path="/science" element={<News setprogress={setprogress}key="science" pageSize={pageSize} country="in" category="science"/>}/> 
-             <Route exact path="/sports" element={<News  setprogress={setprogress} key="sports" pageSize={pageSize} country="in" category="sports"/>}/> 
-             <Route exact path="/technology" element={<News  setprogress={setprogress} key="technology" pageSize={pageSize} country="in" category="technology"/>}/> 
-           </Routes>
+                   <Route exact path="/entertainment" element={<News setprogress={setprogress} key="entertainment" pageSize={pageSize} country="in" category="entertainment"/>}/> 
+                   <Route exact path="/general" element={<News setprogress={setprogress}  key="general" pageSize={pageSize} country="in" category="general"/>}/> 
+                   <Route exact path="/health" element={<News setprogress={setprogress} key="health" pageSize={pageSize} country="in" category="health"/>}/> 
+                   <Route exact path="/science" element={<News setprogress={setprogress}key="science" pageSize={pageSize} country="in" category="science"/>}/> 
+                   <Route exact path="/sports" element={<News  setprogress={setprogress} key="sports" pageSize={pageSize} country="in" category="sports"/>}/> 
+                   <Route exact path="/technology" element={<News  setprogress={setprogress} key="technology" pageSize={pageSize} country="in" category="technology"/>}/> 
+                </Routes>
         
            
           
