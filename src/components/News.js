@@ -40,13 +40,13 @@ useEffect(()=>{
 
  
 const handleprevclick = async ()=>{
-console.log("prev");
+// console.log("prev");
 setpage(page-1);
 updatenews();
  
 }
 const handlenextclick = async ()=>{
-    console.log("next");
+    // console.log("next");
 
         setpage(page+1)
        updatenews();
