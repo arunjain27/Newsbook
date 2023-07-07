@@ -39,7 +39,7 @@ return (
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> 
 	
           		<Routes>
             
