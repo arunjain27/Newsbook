@@ -80,7 +80,7 @@ const handlenextclick = async ()=>{
     
 
                      <button  className='buttonprev' disabled={page<=1} type="button"onClick={handleprevclick} >prev</button>
-                     <button   className='buttonprev' disabled={page+1>Math.ceil(totalresults/20)} onClick={handlenextclick}>next</button>
+                     <button   className='buttonprev' disabled={page+1>Math.ceil(totalresults/20)} type="button" onClick={handlenextclick}>next</button>
 
                    </div>
 

@@ -10,7 +10,7 @@ const App =()=>{
 
 return (
 <div>
- 
+  
        <LoadingBar
         color='#f11946'
       height={3}
